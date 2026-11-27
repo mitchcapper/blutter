@@ -26,8 +26,8 @@ class BlutterOpts {
         this.spyRegexes.push(new SpyRegex(regex,maxDepth));
     }
     // takes an address in the form of 0x2fd950 for example, you can find a list of functions and their addresses in the generated ida_script/addNames.py file, you can optionally pass a display name to show when entered
-    SpyByFunctionAddy(address, name=""){
-        this.SpyFunctions.push(new SpyFunc(address,name));
+    SpyByFunctionAddy(address, name="", maxDepth=MaxDepth){
+        this.SpyFunctions.push(new SpyFunc(address,name,maxDepth));
     }
     SetSpys(){
         if (this.spyRegexes.length > 0){
